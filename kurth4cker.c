@@ -8,13 +8,13 @@ int kurth4cker_init(void);
 void kurth4cker_exit(void);
 
 int kurth4cker_init(void) {
-	printk(KERN_INFO "hello world\n");
+	printk(KERN_INFO "kurth4cker: hello world\n");
 
 	return 0;
 }
 
 void kurth4cker_exit(void) {
-	printk(KERN_INFO "goodbye world\n");
+	printk(KERN_INFO "kurth4cker: goodbye world\n");
 }
 
 module_init(kurth4cker_init);
