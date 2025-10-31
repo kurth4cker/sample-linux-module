@@ -9,10 +9,8 @@ static void walk_processes(void) {
 
 	rcu_read_lock();
 
-	ts = next_task(&init_task);
-	while (ts != &init_task) {
+	for_each_process(ts) {
 		printk(KERN_INFO "kurth4cker: PID = %d, COMM = %s", ts->pid, ts->comm);
-		ts = next_task(ts);
 	}
 
 	rcu_read_unlock();
