@@ -9,8 +9,7 @@ static void walk_processes(void) {
 
 	rcu_read_lock();
 
-	list_for_each_entry_rcu(ts, &init_task.tasks, tasks) {
-	// for_each_process(ts) {
+	for_each_process(ts) {
 		printk(KERN_INFO "kurth4cker: PID = %d, COMM = %s", ts->pid, ts->comm);
 	}
 
