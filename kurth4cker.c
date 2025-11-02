@@ -59,6 +59,7 @@ static void kurth4cker_exit(void) {
 
 	printk(KERN_INFO "kurth4cker: exit\n");
 }
+
 static int kurth4cker_open(struct inode *inodep, struct file *filp) {
 	printk(KERN_INFO "kurth4cer: opened\n");
 
